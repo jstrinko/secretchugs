@@ -1,0 +1,15 @@
+{
+	"name": "secretchugs",
+	"description": "Secretchugs.com",
+	"version": "0.0.1",
+	"author": "Jeff Strinko <jeff@strinko.com>",
+	"repository": {
+		"type": "git",
+		"url": "http://git.strinko.com/git/repos/secretchugs"
+	},
+	"dependencies": {
+		"async": "0.2.x",
+		"underscore": "1.5.x",
+		"glob": "4.0.5"
+	}
+}

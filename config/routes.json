@@ -1,0 +1,14 @@
+{
+	"/": {
+		"type": "file",
+		"source": "/index.html"
+	},
+	"/article/:story_id/:title": {
+		"type": "dynamic",
+		"handler": "article_handler"
+	},
+	"/page/:page_id": {
+		"type": "dynamic",
+		"handler": "page_handler"
+	}
+}
