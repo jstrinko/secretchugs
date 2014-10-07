@@ -1,14 +1,43 @@
 {
 	"/": {
 		"type": "file",
-		"source": "/index.html"
+		"source": "/web/html/index.html",
+		"content-type": "text/html"
+	},
+	"/style/site.css": {
+		"type": "file",
+		"source": "/build/style/site.css",
+		"content-type": "text/css",
+		"grunt_info": {
+			"less": {
+				"options": {
+					"sourceMap": true,
+					"outputSourceFiles": true
+				},
+				"src": {
+					"expand": true,
+					"cwd": "__SRCTOP__/secretchugs/web/less",
+					"src": ["site.less"],
+					"dest": "__SRCTOP__/secretchugs/build/style",
+					"ext": ".css"
+				}
+			}
+		}
+	},
+	"/scripts/site.js": {
+		"type": "file",
+		"source": "/build/scripts/site.js",
+		"content-type": "text/javascript",
+		"grunt-info": {
+
+		}
 	},
 	"/article/:story_id/:title": {
 		"type": "dynamic",
-		"handler": "article_handler"
+		"source": "/requests/article_request.js"
 	},
 	"/page/:page_id": {
 		"type": "dynamic",
-		"handler": "page_handler"
+		"source": "/requests/page_request.js"
 	}
 }
