@@ -1,0 +1,136 @@
+body {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #122e3c;
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #667555;
+}
+a:visited {
+  color: #667555;
+}
+a:hover {
+  color: #42532f;
+}
+button {
+  border: 2px solid #122e3c;
+  background-color: #e7eae4;
+  padding: 5px 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  color: #385617;
+  font-weight: bold;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+h1,
+h2 {
+  margin: 0;
+}
+input {
+  padding: 3px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+textarea {
+  font-family: 'Josefin Sans', sans-serif;
+}
+.full_width {
+  width: 100%;
+}
+.med_height {
+  height: 200px;
+}
+.block {
+  display: block;
+}
+.success {
+  color: #667555;
+}
+.fail {
+  color: #82665e;
+}
+.header {
+  height: 40px;
+  width: 100%;
+  clear: both;
+  background-color: #122e3c;
+  font-family: 'Open Sans Condensed', sans-serif;
+  position: absolute;
+  top: 0;
+}
+.header ul {
+  margin: 0px;
+  display: block;
+  text-align: center;
+  padding: 0px;
+  list-style-type: none;
+}
+.header ul li {
+  margin: 5px 10px;
+  padding: 2px 5px;
+  display: inline-block;
+}
+.header ul li.selected {
+  background-color: #e7eae4;
+  border-radius: 3px;
+}
+.header ul li a {
+  font-weight: normal;
+  font-size: 18px;
+  color: #e7eae4;
+}
+.header ul li.selected a {
+  color: #385617;
+}
+.bodyContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+.body {
+  width: 70%;
+  margin-top: 60px;
+}
+.chug {
+  border: 1px solid #122e3c;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.chug ul.tags {
+  margin: 0px;
+  display: block;
+  text-align: left;
+  padding: 0px;
+  list-style-type: none;
+  float: right;
+}
+.chug ul.tags li {
+  font-size: 1em;
+  display: inline-block;
+  padding: 5px;
+}
+.chug .tagsContainer {
+  clear: both;
+  width: 100%;
+  overflow: hidden;
+}
+.chug .tagLabel {
+  font-size: 1em;
+  padding: 5px;
+}
+.chug .created_at {
+  float: right;
+}
+.private .header {
+  background-color: #5c3d34;
+}
+.preview {
+  margin-top: 20px;
+}
+.preview .label {
+  font-weight: bold;
+}
+/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sources%22%3A%5B%22%2Fmnt%2Fdata%2Fusers%2Fec2-user%2Fsrc%2Fsecretchugs%2Fweb%2Fless%2Fapplication.less%22%2C%22%2Fmnt%2Fdata%2Fusers%2Fec2-user%2Fsrc%2Fsecretchugs%2Fweb%2Fless%2Fglobals.less%22%2C%22%2Fmnt%2Fdata%2Fusers%2Fec2-user%2Fsrc%2Fsecretchugs%2Fweb%2Fless%2Fheader.less%22%2C%22%2Fmnt%2Fdata%2Fusers%2Fec2-user%2Fsrc%2Fsecretchugs%2Fweb%2Fless%2Fbody.less%22%2C%22%2Fmnt%2Fdata%2Fusers%2Fec2-user%2Fsrc%2Fsecretchugs%2Fweb%2Fless%2Fchugs.less%22%2C%22%2Fmnt%2Fdata%2Fusers%2Fec2-user%2Fsrc%2Fsecretchugs%2Fweb%2Fless%2Fprivate%2Fheader.less%22%2C%22%2Fmnt%2Fdata%2Fusers%2Fec2-user%2Fsrc%2Fsecretchugs%2Fweb%2Fless%2Fprivate%2Fpreview.less%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22AAAA%3BEACC%2CyBAAA%3BEACA%2CSAAA%3BEACA%2CUAAA%3BEACA%2CaCgBa%2C0BDhBb%3BEACA%2CcAAA%3B%3BAAED%3BEACC%2CqBAAA%3BEACA%2CiBAAA%3BEACA%2CcAAA%3B%3BAAED%2CCAAC%3BEACA%2CcAAA%3B%3BAAED%2CCAAC%3BEACA%2CcAAA%3B%3BAAED%3BEACC%2CyBAAA%3BEACA%2CyBAAA%3BEACA%2CgBAAA%3BEACA%2CeAAA%3BEACA%2CkBAAA%3BEACA%2CcAAA%3BEACA%2CiBAAA%3BEACA%2CaCLe%2CiCDKf%3B%3BAAED%3BAAAI%3BEACH%2CSAAA%3B%3BAAED%3BEACC%2CYAAA%3BEACA%2CaCba%2C0BDab%3B%3BAAED%3BEACC%2CaChBa%2C0BDgBb%3B%3BAAED%3BEACC%2CWAAA%3B%3BAAED%3BEACC%2CaAAA%3B%3BAAED%3BEACC%2CcAAA%3B%3BAAED%3BEACC%2CcAAA%3B%3BAAED%3BEACC%2CcAAA%3B%3BAEnDD%3BEACC%2CYAAA%3BEACA%2CWAAA%3BEACA%2CWAAA%3BEACA%2CyBAAA%3BEACA%2CaDgBe%2CiCChBf%3BEACA%2CkBAAA%3BEACA%2CMAAA%3B%3BAAED%2COAAQ%3BEACP%2CWAAA%3BEACA%2CcAAA%3BEACA%2CkBAAA%3BEACA%2CYAAA%3BEACA%2CqBAAA%3B%3BAAED%2COAAQ%2CGAAG%3BEACV%2CgBAAA%3BEACA%2CgBAAA%3BEACA%2CqBAAA%3B%3BAAED%2COAAQ%2CGAAG%2CGAAE%3BEACZ%2CyBAAA%3BEACA%2CkBAAA%3B%3BAAED%2COAAQ%2CGAAG%2CGAAG%3BEACb%2CmBAAA%3BEACA%2CeAAA%3BEACA%2CcAAA%3B%3BAAED%2COAAQ%2CGAAG%2CGAAE%2CSAAU%3BEACtB%2CcAAA%3B%3BAC%2FBD%3BEACC%2CUAAA%3BEACA%2CcAAA%3B%3BAAED%3BEACC%2CUAAA%3BEACA%2CgBAAA%3B%3BACND%3BEACC%2CyBAAA%3BEACA%2CmBAAA%3BEACA%2CaAAA%3BEACA%2CmBAAA%3B%3BAAED%2CKAAM%2CGAAE%3BEACP%2CWAAA%3BEACA%2CcAAA%3BEACA%2CgBAAA%3BEACA%2CYAAA%3BEACA%2CqBAAA%3BEACA%2CYAAA%3B%3BAAED%2CKAAM%2CGAAE%2CKAAM%3BEACb%2CcAAA%3BEACA%2CqBAAA%3BEACA%2CYAAA%3B%3BAAED%2CKAAM%3BEACL%2CWAAA%3BEACA%2CWAAA%3BEACA%2CgBAAA%3B%3BAAED%2CKAAM%3BEACL%2CcAAA%3BEACA%2CYAAA%3B%3BAAED%2CKAAM%3BEACL%2CYAAA%3B%3BAC7BD%2CQAAS%3BEACR%2CyBAAA%3B%3BACDD%3BEACC%2CgBAAA%3B%3BAAGD%2CQAAS%3BEACR%2CiBAAA%22%7D */

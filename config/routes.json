@@ -4,6 +4,43 @@
 		"source": "/web/html/index.html",
 		"content-type": "text/html"
 	},
+	"/private": {
+		"type": "file",
+		"source": "/web/html/private.html",
+		"content-type": "text/html",
+		"auth": {
+			"username": "__SC_PRIVATE_USER__",
+			"password": "__SC_PRIVATE_PASS__"
+		}
+	},
+	"/private/create_chug": {
+		"type": "dynamic",
+		"source": "/requests/create_chug_request.js",
+		"content-type": "application/json",
+		"auth": {
+			"username": "__SC_PRIVATE_USER__",
+			"password": "__SC_PRIVATE_PASS__"
+		}
+	},
+	"/private/create_howto": {
+		"type": "dynamic",
+		"source": "/requests/create_howto_request.js",
+		"content-type": "application/json",
+		"auth": {
+			"username": "__SC_PRIVATE_USER__",
+			"password": "__SC_PRIVATE_PASS__"
+		}
+	},
+	"/chugs.js": {
+		"type": "dynamic",
+		"source": "/requests/chugs_json_request.js",
+		"content-type": "text/javascript"
+	},
+	"/howtos.js": {
+		"type": "dynamic",
+		"source": "/requests/howtos_json_request.js",
+		"content-type": "text/javascript"
+	},
 	"/style/site.css": {
 		"type": "file",
 		"source": "/build/style/site.css",
@@ -11,25 +48,119 @@
 		"grunt_info": {
 			"less": {
 				"options": {
-					"sourceMap": true,
-					"outputSourceFiles": true
+					"sourceMap": true
 				},
-				"src": {
-					"expand": true,
-					"cwd": "__SRCTOP__/secretchugs/web/less",
-					"src": ["site.less"],
-					"dest": "__SRCTOP__/secretchugs/build/style",
-					"ext": ".css"
+				"files": {
+					"__SRCTOP__/secretchugs/build/style/site.css": "__SRCTOP__/secretchugs/web/less/site.less"
 				}
+			},
+			"watch": {
+				"files": ["__SRCTOP__/secretchugs/web/less/**"],
+				"tasks": ["build"]
 			}
 		}
 	},
-	"/scripts/site.js": {
+	"/style/private.css": {
 		"type": "file",
-		"source": "/build/scripts/site.js",
+		"source": "/build/style/private.css",
+		"content-type": "text/css",
+		"grunt_info": {
+			"less": {
+				"options": {
+					"sourceMap": true
+				},
+				"files": {
+					"__SRCTOP__/secretchugs/build/style/private.css": "__SRCTOP__/secretchugs/web/less/private.less"
+				}
+			},
+			"watch": {
+				"files": ["__SRCTOP__/secretchugs/web/less/private/**"],
+				"tasks": ["build"]
+			}
+		}
+	},
+	"/script/site.js": {
+		"type": "file",
+		"source": "/build/script/site.js",
 		"content-type": "text/javascript",
-		"grunt-info": {
-
+		"grunt_info": {
+			"react": {
+				"files": {
+					"__SRCTOP__/secretchugs/build/script/jsx.js": [
+						"__SRCTOP__/secretchugs/web/jsx/backbonemixin.jsx",
+						"__SRCTOP__/secretchugs/web/jsx/header.jsx",
+						"__SRCTOP__/secretchugs/web/jsx/chugs.jsx",
+						"__SRCTOP__/secretchugs/web/jsx/about.jsx",
+						"__SRCTOP__/secretchugs/web/jsx/contact.jsx",
+						"__SRCTOP__/secretchugs/web/jsx/products.jsx",
+						"__SRCTOP__/secretchugs/web/jsx/howto.jsx",
+						"__SRCTOP__/secretchugs/web/jsx/stories.jsx",
+						"__SRCTOP__/secretchugs/web/jsx/rightrail.jsx",
+						"__SRCTOP__/secretchugs/web/jsx/over21.jsx",
+						"__SRCTOP__/secretchugs/web/jsx/app.jsx"
+					]
+				}
+			},
+			"concat": {
+				"src": [
+					"__SRCTOP__/secretchugs/web/script/*.js", 
+					"__SRCTOP__/secretchugs/web/script/util/*.js", 
+					"__SRCTOP__/secretchugs/build/script/jsx.js"
+				],
+				"dest": "__SRCTOP__/secretchugs/build/script/site.js"
+			},
+			"watch": {
+				"files": [
+					"__SRCTOP__/secretchugs/web/script/**",
+					"__SRCTOP__/secretchugs/web/jsx/**"
+				],
+				"tasks": ["build"]
+			}
+		}
+	},
+	"/script/private.js": {
+		"type": "file",
+		"source": "/build/script/private.js",
+		"content-type": "text/javascript",
+		"auth": {
+			"username": "__SC_PRIVATE_USER__",
+			"password": "__SC_PRIVATE_PASS__"
+		},
+		"grunt_info": {
+			"react": {
+				"files": {
+					"__SRCTOP__/secretchugs/build/script/private/jsx.js": [
+						"__SRCTOP__/secretchugs/web/jsx/backbonemixin.jsx",
+						"__SRCTOP__/secretchugs/web/jsx/private/header.jsx",
+						"__SRCTOP__/secretchugs/web/jsx/private/createmixin.jsx",
+						"__SRCTOP__/secretchugs/web/jsx/private/products.jsx",
+						"__SRCTOP__/secretchugs/web/jsx/private/stories.jsx",
+						"__SRCTOP__/secretchugs/web/jsx/private/chugs.jsx",
+						"__SRCTOP__/secretchugs/web/jsx/private/howto.jsx",
+						"__SRCTOP__/secretchugs/web/jsx/chugs.jsx",
+						"__SRCTOP__/secretchugs/web/jsx/howto.jsx",
+						"__SRCTOP__/secretchugs/web/jsx/products.jsx",
+						"__SRCTOP__/secretchugs/web/jsx/stories.jsx",
+						"__SRCTOP__/secretchugs/web/jsx/private/app.jsx"
+					]
+				}
+			},
+			"concat": {
+				"src": [
+					"__SRCTOP__/secretchugs/web/script/*.js",
+					"__SRCTOP__/secretchugs/web/script/util/*.js", 
+					"__SRCTOP__/secretchugs/web/script/private/*.js",
+					"__SRCTOP__/secretchugs/build/script/private/jsx.js"
+				],
+				"dest": "__SRCTOP__/secretchugs/build/script/private.js"
+			},
+			"watch": {
+				"files": [
+					"__SRCTOP__/secretchugs/web/script/private/**",
+					"__SRCTOP__/secretchugs/web/jsx/private/**"
+				],
+				"tasks": ["build"]
+			}
 		}
 	},
 	"/article/:story_id/:title": {

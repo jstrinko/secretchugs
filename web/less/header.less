@@ -1,0 +1,33 @@
+.header {
+	height: 40px;
+	width: 100%;
+	clear: both;
+	background-color: @primaryDark;
+	font-family: @secondaryFont;
+	position: absolute;
+	top: 0;
+}
+.header ul {
+	margin: 0px;
+	display: block;
+	text-align: center;
+	padding: 0px;
+	list-style-type: none;
+}
+.header ul li {
+	margin: 5px 10px;
+	padding: 2px 5px;
+	display: inline-block;
+}
+.header ul li.selected {
+	background-color: @positiveLight;
+	border-radius: 3px;
+}
+.header ul li a {
+	font-weight: normal;
+	font-size: 18px;
+	color: @positiveLight;
+}
+.header ul li.selected a {
+	color: @positiveDark; 
+}
